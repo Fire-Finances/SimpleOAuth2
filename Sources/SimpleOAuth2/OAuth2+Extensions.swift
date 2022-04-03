@@ -31,7 +31,9 @@ extension OAuth2Request {
             URLQueryItem(name: "client_id", value: clientId),
             URLQueryItem(name: "redirect_uri", value: redirectUri),
             URLQueryItem(name: "response_type", value: "code"),
-            URLQueryItem(name: "scope", value: scopes.joined(separator: "+"))
+            URLQueryItem(name: "scope", value: scopes.joined(separator: "+")),
+            URLQueryItem(name: "account", value: "all"),
+            URLQueryItem(name: "referral", value: "fong_cm")
         ]
         
         var components = URLComponents(string: authUrl)!
